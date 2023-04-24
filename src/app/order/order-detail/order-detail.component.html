@@ -1,0 +1,42 @@
+<div id="component">
+    <header>
+        <app-menubar></app-menubar>
+        <span id="pageTitle">{{pageTitle}}</span>
+    </header>
+    <main>
+        <table class="table table-sm table-striped" *ngIf="order">
+            <tbody>
+                <tr>
+                    <td>Id</td>
+                    <td><input [(ngModel)]="order.id" readonly></td>
+                </tr>
+                <tr>
+                    <td>Date</td>
+                    <td><input [(ngModel)]="order.date" readonly></td>
+                </tr>
+                <tr>
+                    <td>Description</td>
+                    <td><input [(ngModel)]="order.description" readonly></td>
+                </tr>
+                <tr>
+                    <td>Status</td>
+                    <td><input [(ngModel)]="order.status" readonly></td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td><input [(ngModel)]="order.total" readonly></td>
+                </tr>
+                <tr>
+                    <td>Customer</td>
+                    <td><input [ngModel]="order.customer?.name" readonly></td>
+                </tr>
+            </tbody>
+        </table>
+        <button (click)="remove()" class="btn btn-danger">Remove</button>
+        <span *ngIf="showVerifyRemove">
+            <span> | </span>
+            <button (click)="removeVerified()" class="btn btn-danger">Verify Remove</button>
+        </span>
+    </main>
+</div>
+
