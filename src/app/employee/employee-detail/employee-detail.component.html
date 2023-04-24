@@ -1,0 +1,32 @@
+<div id="component">
+    <header>
+        <span id="pageTitle">{{pageTitle}}</span>
+    </header>
+    <main>
+        <table class="table table-sm table-striped" *ngIf="employee">
+            <tbody>
+                <tr>
+                    <td>Id</td>
+                    <td><input [(ngModel)]="employee.id" readonly></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input [(ngModel)]="employee.email" readonly></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input [(ngModel)]="employee.password" type="password" readonly></td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td><input [(ngModel)]="employee.name" readonly></td>
+                </tr>
+            </tbody>
+        </table>
+        <button (click)="remove()" class="btn btn-danger">Remove</button>
+        <span *ngIf="showVerifyRemove">
+            <span> | </span>
+            <button (click)="removeVerified()" class="btn btn-danger">Verify Remove</button>
+        </span>
+    </main>
+</div>
