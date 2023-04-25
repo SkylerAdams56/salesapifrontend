@@ -14,7 +14,9 @@ import { MenubarComponent } from './menu/menubar/menubar.component';
 import { OrderListComponent } from './order/order-list/order-list.component';
 import { OrderDetailComponent } from './order/order-detail/order-detail.component';
 import { OrderCreateComponent } from './order/order-create/order-create.component';
-import { OrderChangeComponent } from './order/order-change/order-change.component'
+import { OrderChangeComponent } from './order/order-change/order-change.component';
+import { SortPipe } from './pipes/sort.pipe';
+import { OrderLinesComponent } from './order/order-lines/order-lines.component'
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { OrderChangeComponent } from './order/order-change/order-change.componen
     OrderListComponent,
     OrderDetailComponent,
     OrderCreateComponent,
-    OrderChangeComponent
+    OrderChangeComponent,
+    SortPipe,
+    OrderLinesComponent
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule,

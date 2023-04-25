@@ -9,6 +9,7 @@ import { OrderListComponent } from './order/order-list/order-list.component';
 import { OrderChangeComponent } from './order/order-change/order-change.component';
 import { OrderCreateComponent } from './order/order-create/order-create.component';
 import { OrderDetailComponent } from './order/order-detail/order-detail.component';
+import { OrderLinesComponent } from './order/order-lines/order-lines.component';
 
 const routes: Routes = [
 
@@ -20,8 +21,10 @@ const routes: Routes = [
   { path: "order/create", component: OrderCreateComponent },
   { path: "employee/detail/:id", component: EmployeeDetailComponent },
   { path: "order/detail/:id", component: OrderDetailComponent },
+  { path: "order/lines/:id", component: OrderLinesComponent },
   { path: "employee/login", component: EmployeeLoginComponent },
   { path: "order/list", component: OrderListComponent }
+
 ];
 
 @NgModule({

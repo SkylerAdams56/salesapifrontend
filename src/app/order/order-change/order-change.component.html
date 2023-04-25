@@ -12,7 +12,7 @@
                 </tr>
                 <tr>
                     <td>Date</td>
-                    <td><input [(ngModel)]="order.date" ></td>
+                    <td><input [(ngModel)]="order.date" type="date"></td>
                 </tr>
                 <tr>
                     <td>Description</td>
@@ -20,15 +20,20 @@
                 </tr>
                 <tr>
                     <td>Status</td>
-                    <td><input [(ngModel)]="order.status"></td>
+                    <td><input [(ngModel)]="order.status" readonly></td>
                 </tr>
                 <tr>
                     <td>Total</td>
-                    <td><input [(ngModel)]="order.total"></td>
+                    <td><input [ngModel]="order.total | currency" readonly></td>
                 </tr>
                 <tr>
                     <td>Customer</td>
-                    <td><input [ngModel]="order.customer?.name"></td>
+                    <td>
+                        <select [(ngModel)]="order.customerId">
+                            <option *ngFor="let c of customers" value="{{c.id}}">{{c.name}}</option>
+                        </select>
+                    </td>
+
                 </tr>
             </tbody>
         </table>

@@ -16,4 +16,5 @@ export class CustomerService {
   list(): Observable<Customer[]>{
     return this.http.get(`${this.baseurl}`) as Observable<Customer[]>;
   }
+  
 }
